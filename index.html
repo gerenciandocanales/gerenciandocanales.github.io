@@ -1,122 +1,165 @@
 <!DOCTYPE html>
+<html lang="en">
+
+<title>W3.CSS Template</title>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel='stylesheet' id='Ubuntu-css'  href='https://fonts.googleapis.com/css?family=Ubuntu%3A1%2C100%2C300%2C400%2C400italic%2C700&#038;ver=4.9.16' type='text/css' media='all' />
-</head>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.css" rel="stylesheet" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
 
-.typewrite {
-  text-decoration:none;
-}
+<style>
 
-.button {
-  border-radius: 4px;
-  background-color: #493E4E;
-  border: none;
-  color: #EC7137;
-  text-align: center;
-  font-size: 25px;
-  padding: 20px;
-  width: 250px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
 
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-body,h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif}
-
-body, html {
+body,h1,h2,h3,h4,h5,h6 
+  {
+  width: 100%;
   height: 100%;
-  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  }
+
+.w3-bar,h1, 
+{font-family: "Ubuntu", sans-serif
 }
 
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("./resources/GC-Portada_Web.jpeg");
-  min-height: 100%;
+.fa-anchor,.fa-coffee {font-size:200px}
+
+.btncontainer {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.w3-bar .w3-button {
-  padding: 16px;
+.btncenter {
+  width: 180px;
+  height: 60px;
+  position: absolute;
 }
 
-<html>
-<title>Gerenciando Canales Urugay</title>
-  
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFE3CE;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #EC7137;
+  stroke-dasharray: 150 480;
+
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #1D8A99;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300x;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #493E4E;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+</style>
 <body>
-  
-<!-- Header with full-height image -->
-<header class="w3-display-container w3-grayscale-min" id="home" style="background-image=./resources/GC-Portada_Web.jpeg">
-  <div class="w3-display-left" style="padding:192px">
-    <span> <!--class="w3-third"-->
-     <h1>Tu Canal Digital
-     <h2>
-        <a href="" class="typewrite" data-period="2000" data-type='[ "Desarrolla.", "Optimiza.", "Maximiza.", "Crea." ]'>
-        <span class="wrap"></span>
-      </a>
-      </h2>
-    </span>
-    <!--span class="w3-xxlarge w3-hide-large w3-hide-medium">Desarrollo u optimización de canales digitales MercadoLibre</span><br-->
-  
-    <!--p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">¡CONTACTANOS!</a></p-->
-   
-    
-      <a href="https://forms.gle/NfbimSKUsRh5P4ER9" style="text-decoration:none;">
-      <div class="w3-display-right" style="padding:128px">
-        <div class="w3-card">          
-          <img src="/w3images/team2.jpg" alt="Cityscape" style="width:100%">
-          <div class="w3-container">
-          <h3 style="color:#FFE3CE; text-align:center">David Fernández</h3>
-          <p style="color:#FFE3CE; text-align:center">¡LO QUIERO!</p>
-        </div>
-      </div>
-      </a>
-   
-    
-  </div> 
-  
-  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+
+
+<!-- Header -->
+<header class="w3-container w3-center" style="padding:128px 16px; background:#493E4E">
+  <h1 class="w3-margin w3-jumbo">Desarrollo u optimización del
+canal digital MercadoLibre</h1>
+
+  <div class="btncontainer">
+    <div class="btncenter">
+      <button class="btn">
+        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+        </svg>
+        <span style="color:#FFE3CE">¡COMENZAR!</span>
+      </button>
+    </div>
   </div>
-    
-  </header>
+
+  <!--button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button-->
+  
+</header>
 
 <!-- About Section -->
 <div class="w3-container" style="padding:64px 16px; background:#E6E1F2" id="about">
@@ -136,55 +179,17 @@ body, html {
     <div class="w3-quarter">
       <i class="material-icons" style="font-size:48px;">trending_up</i>
       <p class="w3-large">Resultados</p>
-      <p>Una propuesta con amplio impacto práctico, lo que garantiza que, en caso de haber comenzado con tu estrategia digital, podrás optimizarla en tiempo real y con implementación inmediata . Gestionando la plataforma de Mercado Libre, uno de los líderes del e-commerce a nivel mundial..</p>
+      <p>Una propuesta con amplio impacto práctico, lo que garantiza que, en caso de haber comenzado con tu estrategia digital, podrás optimizarla en tiempo real y con implementación inmediata . Gestionando la plataforma de Mercado Libre, uno de los líderes del e-commerce a nivel mundial.</p>
     </div>
     <div class="w3-quarter">
       <i class="material-icons" style="font-size:48px;">settings</i>
       <p class="w3-large">Integración</p>
-      <p>En caso de estar comenzando con la misma, te permitirá diseñar el proceso e implementación ideal desde el comienzo, lo que te facilitará la gestion del proceso con mayor agilidad y eficacia, evitando correcciones impactando en tus resultados finales..</p>
+      <p>En caso de estar comenzando con la misma, te permitirá diseñar el proceso e implementación ideal desde el comienzo, lo que te facilitará la gestion del proceso con mayor agilidad y eficacia, evitando correcciones impactando en tus resultados finales.</p>
     </div>
   </div>
 </div>
 
-<!-- Team Section -->
-<div class="w3-container" style="padding:64px 192px; background:#493E4E" id="team">
-  <h3 class="w3-center" style="color:#FFE3CE">CONDUCE</h3>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:32px">
-      <div class="w3-card">
-        <img src="./resources/df-photo_large.jpeg" alt="David" style="width:100%">
-        <div class="w3-container">
-          <h3 style="color:#FFE3CE">David Fernández</h3>
-          <p class="w3-opacity" style="color:#EC7137">Experto en e - Commerce</p>
-          <p style="color:#FFE3CE">Junto a un equipo de Gerenciando Canales Argentina, especialistas en la plataforma MercadoLibre y el ecosistema MeLi, quienes te brindarán apoyo durante todo el programa.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-     
-      
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Contact Section -->
-<div class="w3-container" style="padding:32px 8px; background:#E6E1F2" id="contact">
-  <h3 class="w3-center">CONTACTO</h3>
-  <!--p class="w3-center w3-large">Key features of our company</p-->
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-half">
-      <i class="fa fa-envelope w3-margin-bottom w3-xxlarge w3-center"></i>
-      <p class="w3-large">gerenciandocanalesuruguay@gmail.com</p>
-    </div>
-    <div class="w3-half">
-      <i class="fa fa-whatsapp w3-margin-bottom w3-xxlarge w3-center"></i>
-      <p class="w3-large">+598 97 119 790</p>
-    </div>
-  </div>
-</div>
-
-<!-- Promo Section "Statistics" -->
-<div class="w3-container w3-row w3-center w3-blue-gray w3-padding-64">
+<div class="w3-container w3-row w3-center w3-padding-64" style="background:#493E4E">
   <div class="w3-quarter" style="color:#EC7137">
     <span class="w3-xxlarge" >100%</span>
     <br>Online
@@ -203,63 +208,41 @@ body, html {
   </div>
 </div>
 
-<!--div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACTO</h3>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-whatsapp fa-fw w3-xxlarge w3-center"></i> +598 97 119 790</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-center"></i> gerenciandocanalesuruguay@gmail.com</p>
-    <br>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> CONTACTANOS!
-        </button>
-      </p>
-    </form>
-  </div>
-</div-->
-
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>INICIO</a>
-  <div class="w3-xlarge w3-section">
+
+<div class="w3-container" style="padding:32px 8px; background:#E6E1F2" id="contact">
+  <h3 class="w3-center">CONTACTO</h3>
+  <div class="w3-row-padding w3-center" style="margin-top:32px">
+    <div class="w3-half">
+      <i class="fa fa-envelope w3-margin-bottom w3-xxlarge w3-center"></i>
+      <p class="w3-large">gerenciandocanalesuruguay@gmail.com</p>
+    </div>
+    <div class="w3-half">
+      <i class="fa fa-whatsapp w3-margin-bottom w3-xxlarge w3-center"></i>
+      <p class="w3-large">+598 97 119 790</p>
+    </div>
+  </div>
+</div>
+
+<footer class="w3-container w3-padding-32 w3-center" style="background:#E6E1F2"> 
+  <div class="w3-xlarge w3-padding-32">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Powered by El Dedo Records</p> <!--a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p-->
+ </div>
+ <p>Powered by El Dedo Records</p>
 </footer>
- 
+
 <script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
   }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
 }
 </script>
 
