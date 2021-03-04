@@ -28,12 +28,24 @@ body,h1,h2,h3,h4,h5,h6
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
   }
+  
+.bg_img-01 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./resource/GC-Portada_Web.jpeg.jpg");
+  min-height: 100%;
+}
+  
+.pr_img-01 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./resource/df-photo_mid-square.jpeg");
+  min-height: 100%;
+}
 
 .w3-bar,h1, 
 {font-family: "Ubuntu", sans-serif
 }
-
-.fa-anchor,.fa-coffee {font-size:200px}
 
 .btncontainer {
   width: 400px;
@@ -140,24 +152,28 @@ svg {
 <body>
 
 
-<!-- Header -->
-<header class="w3-container w3-center" style="padding:128px 16px; background:#493E4E">
-  <h1 class="w3-margin w3-jumbo">Desarrollo u optimización del
-canal digital MercadoLibre</h1>
+<!-- Header background:#493E4E">-->
+<header class="w3-container w3-center" style="padding:128px 16px; background:bg_img-01>
 
-  <a href="https://forms.gle/NfbimSKUsRh5P4ER9">
-  <div class="btncontainer">
-    <div class="btncenter">
-      <button class="btn">
-        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-        </svg>
-        <span style="color:#FFE3CE">¡COMENZAR!</span>
-      </button>
-    </div>
+  <h1 class="w3-margin w3-jumbo">Desarrollo u optimización del canal digital MercadoLibre
+  </h1>
+
+  <div class="w3-container" style="padding:64px 16px;">
+    <a href="https://forms.gle/NfbimSKUsRh5P4ER9">
+      <div class="btncontainer">
+      <div class="btncenter">
+        <button class="btn">
+          <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg>
+          <span style="color:#FFE3CE">¡COMENZAR!</span>
+        </button>
+      </div>
+      </div>
+    </a>
+    
   </div>
-  </a>
 
   <!--button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button-->
   
@@ -165,8 +181,6 @@ canal digital MercadoLibre</h1>
 
 <!-- About Section -->
 <div class="w3-container" style="padding:64px 16px; background:#E6E1F2" id="about">
-  <h3 class="w3-center">SOBRE EL PROGRAMA</h3>
-  <!--p class="w3-center w3-large">Key features of our company</p-->
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
       <i class="material-icons" style="font-size:48px;">find_in_page</i>
