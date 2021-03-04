@@ -12,6 +12,68 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.css" rel="stylesheet" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
 
+.typewrite {
+  text-decoration:none;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #493E4E;
+  border: none;
+  color: #EC7137;
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./resources/GC-Portada_Web.jpeg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
 <html>
 <title>Gerenciando Canales Urugay</title>
   
@@ -85,9 +147,9 @@
 </div>
 
 <!-- Team Section -->
-<div class="w3-container" style="padding:32px 16px; background:#493E4E" id="team">
+<div class="w3-container" style="padding:64px 192px; background:#493E4E" id="team">
   <h3 class="w3-center" style="color:#FFE3CE">CONDUCE</h3>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+  <div class="w3-row-padding w3-grayscale" style="margin-top:32px">
       <div class="w3-card">
         <img src="./resources/df-photo_large.jpeg" alt="David" style="width:100%">
         <div class="w3-container">
