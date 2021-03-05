@@ -141,10 +141,10 @@ svg {
   transform: rotateY(180deg);
 }
 
-/* Style the button that is used to open and close the collapsible content */
+/* Collapsible butttton */
 .collapsible {
-  background-color: #eee;
-  color: #444;
+  background-color: #493E4E;
+  color: #FFE3CE;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -154,38 +154,30 @@ svg {
   font-size: 15px;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Hover color, replace with the cheta function */
 .active, .collapsible:hover {
-  background-color: #ccc;
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+  transition: 1s ease-in-out;
+  background-color: #1D8A99;
 }
 
 .collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
+  content: '\002B';
+  color: #EC7137;
+  font-weight: bold;
   float: right;
   margin-left: 5px;
 }
 
 .active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: "\2212";
 }
 
 .content {
   padding: 0 18px;
-  background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  background-color: #FFE3CE;
 }
 
 </style>
@@ -231,24 +223,47 @@ svg {
 </header>
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <button type="button" class="collapsible">Open Collapsible
-      </button>
-         <div class="content">
-           <p>Lorem ipsu culos locos porque no funciona esta verga</p>
-         </div>
+<div class="w3-row-padding w3-padding-64 w3-container" style="padding:64px 16px; background:#E6E1F2" id="about">
+  <div class="w3-twothird">
+    
+    <h2 style=padding:32px>Información</h2>
+
+      <button class="collapsible">Sobre el Programa</button>
+        <div class="content">
+        <p>El presente curso apunta a formar integralmente a personas interesadas en el comercio electrónico para desarrollarse como gestores y/o analistas de cuentas personales o empresariales dentro de la Plataforma Mercado Libre.</p>
+        </div>
+      <button class="collapsible">Objetivos</button>
+        <div class="content">
+        <p>Desarrollar los perfiles de operadores y analistas de Mercado Libre para entender el funcionamiento de la plataforma y el ecosistema de MeLi. Organizar e implementar estratégicamente el proceso de gestión de la plataforma, alineado con las áreas relacionadas al proceso comercial de cada organización.</p>
+        <p>Vender productos en tiempo y forma de acuerdo a los requerimientos del cliente a través de la plataforma, procurando la fidelización de los clientes, el posicionamiento y reputación de la organización y maximizando resultados en concordancia con políticas comerciales establecidas.</p> 
+    <p>Dominar prácticas óptimas y las reglas del ecosistema MeLi para una operación efectiva de la plataforma y desarrollar habilidades y herramientas para gestionar cotidianamente las actividades de análisis.</p>
+        </div>
+      <button class="collapsible">Enfoque</button>
+        <div class="content">
+        <p>Es un programa de capacitación para la formación de analistas y operadores para cuentas de Mercado Libre con foco en la implementación y gestión de procesos sostenibles y escalables orientados a un entorno de ventas multicanal.</p>
+        </div>
+      <button class="collapsible">Estructura</button>
+        <div class="content">
+        <p>16 sesiones de trabajo consecutivas semanalmente, donde podrás analizar y trabajar sobre los principales desafíos que nos presenta la actual transformación digital en el área de e-commerce de tu negocio.</p>
+        </div>
+      <button class="collapsible">Resultados</button>
+        <div class="content">
+        <p>Una propuesta con amplio impacto práctico, lo que garantiza que, en caso de haber comenzado con tu estrategia digital, podrás optimizarla en tiempo real y con implementación inmediata . Gestionando la plataforma de Mercado Libre, uno de los líderes del e-commerce a nivel mundial.</p>
+        
+        <p>En caso de estar comenzando con la misma, te permitirá diseñar el proceso e implementación ideal desde el comienzo, lo que te facilitará la gestion del proceso con mayor agilidad y eficacia, evitando correcciones impactando en tus resultados finales.</p>
+        </div>
+
 
     </div>
 
     <div class="w3-third w3-center">
+      <h2 style=padding:32px>Conduce</h2>
       <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
     </div>
   </div>
 </div>
 
-<!-- About Section -->
+<!-- About Section >
 <div class="w3-container" style="padding:64px 16px; background:#E6E1F2" id="about">
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
@@ -272,7 +287,7 @@ svg {
       <p>En caso de estar comenzando con la misma, te permitirá diseñar el proceso e implementación ideal desde el comienzo, lo que te facilitará la gestion del proceso con mayor agilidad y eficacia, evitando correcciones impactando en tus resultados finales.</p>
     </div>
   </div>
-</div>
+</div-->
 
 <div class="w3-container w3-row w3-center w3-padding-64" style="background:#493E4E">
   <div class="w3-quarter" style="color:#EC7137">
