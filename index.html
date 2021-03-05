@@ -36,6 +36,15 @@ body,h1,h2,h3,h4,h5,h6
   min-height: 100%;
 }
 
+.profile_img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 60%;
+    margin: 0px auto 20px auto;
+    display: block;
+}
+
 .w3-bar,h1, 
 {font-family: "Ubuntu", sans-serif
 }
@@ -137,18 +146,20 @@ svg {
 
 .card {
   /* Add shadows to create the "card" effect */
+  background: #FFE3CE;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
 }
 
 /* Add some padding inside the card container */
 .card-container {
-  padding: 2px 16px;
+  background: #493E4E;
+  padding: 15px 23px;
 }
 
 .looptext {
@@ -271,7 +282,7 @@ svg {
     <div class="w3-third w3-center">
       <h2 style=padding:32px>Conduce</h2>
         <div class="card">
-          <img src="./resources/df-photo_mid-square.jpeg" alt="Avatar" style="width:100%">
+          <img src="./resources/df-photo_mid-square.jpeg" alt="David" class="profile_img">
         <div class="container">
           <h4><b>David Férnandez</b></h4>
           <p>Experto en e - Commerce</p>
