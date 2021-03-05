@@ -75,7 +75,6 @@ svg {
   fill: none;
   stroke: #EC7137;
   stroke-dasharray: 150 480;
-
   stroke-dashoffset: 150;
   transition: 1s ease-in-out;
 }
@@ -95,52 +94,6 @@ svg {
   font-weight: 100;
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 300x;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: #493E4E;
-  color: white;
-  transform: rotateY(180deg);
-}
-
 /* Collapsible butttton */
 .collapsible {
   background-color: #493E4E;
@@ -151,16 +104,18 @@ svg {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 18px;
+  transition: 1s ease-in-out;
 }
 
 /* Hover color, replace with the cheta function */
 .active, .collapsible:hover {
-  transition: 1s ease-in-out;
+  transition: all 1s ease-in-out;
   background-color: #1D8A99;
 }
 
 .collapsible:after {
+  transition: 1s ease-in-out;
   content: '\002B';
   color: #EC7137;
   font-weight: bold;
@@ -176,8 +131,56 @@ svg {
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-in-out;
   background-color: #FFE3CE;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.card-container {
+  padding: 2px 16px;
+}
+
+.looptext {
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+
+.looptext>div {
+  font-size: 64px;
+  text-transform: uppercase;
+  color: #EC7137;
+  opacity: 0;
+  height: 0px;
+}
+  
+.looptext>div:nth-child(1){
+  animation: animation 12s infinite;
+}
+.looptext>div:nth-child(2){
+  animation: animation 12s infinite;
+  animation-delay: 4s;
+}
+.looptext>div:nth-child(3){
+  animation: animation 12s infinite;
+  animation-delay: 8s;
+}
+@keyframes animation {
+    0% {opacity: 0; height: auto;}
+    16% {opacity: 1;}
+    33% {opacity: 0; height: 0px;}
+    100% {opacity: 0; height: 0px;}
 }
 
 </style>
@@ -189,9 +192,18 @@ svg {
 
 <!--header class="bgimg-1 w3-display-container w3-grayscale-min" id="home"-->
 
+     <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+       <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+       <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+     </svg>
 
 
-  <h1 class="w3-margin w3-jumbo">Desarrollo u optimización del canal digital MercadoLibre
+  <h1 class="w3-margin w3-jumbo" style="color:#FFE3CE">Tu canal digital MercadoLibre
+      <section class="looptext">
+              <div>Desarrolla</div>
+              <div>Optimiza</div>
+              <div>Integra</div>
+      </section>
   </h1>
 
   <div class="w3-container w3-padding-48">
@@ -258,10 +270,15 @@ svg {
 
     <div class="w3-third w3-center">
       <h2 style=padding:32px>Conduce</h2>
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+        <div class="card">
+          <img src="-/resources/df-photo_mid-square.jpeg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>David Férnandez</b></h4>
+          <p>Experto en e - Commerce</p>
+        </div>
+       </div>
     </div>
   </div>
-</div>
 
 <!-- About Section >
 <div class="w3-container" style="padding:64px 16px; background:#E6E1F2" id="about">
