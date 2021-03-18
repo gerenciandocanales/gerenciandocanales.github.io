@@ -49,7 +49,7 @@ body:before{
 	bottom: 0;
 	width: 100%;
 	z-index: -1;
-	background: linear-gradient(to bottom, #753192, #f4f4f4 95%);
+	background: linear-gradient(to bottom, #d8bfe3, #f4f4f4 95%);
 }
 
 h1,h2,h3,h4,h5,h6 
@@ -129,7 +129,7 @@ svg {
 
 .btn:hover {
   transition: 1s ease-in-out;
-  background: #55A38A;
+  background: #8a4f83;
 }
 
 .btn:hover svg {
@@ -159,7 +159,7 @@ svg {
 /* Hover color, replace with the cheta function */
 .active, .collapsible:hover {
   transition: all 1s ease-in-out;
-  background-color: #55A38A;
+  background-color: #8a4f83;
 }
 
 .collapsible:after {
@@ -195,7 +195,7 @@ svg {
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   transition: all 1s ease-in-out;
-  background-color: #55A38A;
+  background-color: #8a4f83;
 
 }
 
@@ -214,7 +214,7 @@ svg {
 .looptext>div {
   font-size: 40px;
   text-transform: uppercase;
-  color: #8a55a3;
+  color: #8a4f83;
   opacity: 0;
   height: 0px;
 }
@@ -248,6 +248,7 @@ a {
 p {
   margin: 1rem 1rem;
   text-align: center;
+  color: #333333;
 }
 
 .bg-light {
@@ -286,7 +287,7 @@ p {
 }
 
 .lead {
-  font-size: 1.3rem;
+  font-size: 2.3rem;
   margin-bottom: 2rem;
 }
 
@@ -300,7 +301,7 @@ p {
   border-bottom: #444 dotted 1px;
 }
 
-.py-1 {  padding: 1.5rem 0;}
+.py-1 {  padding: 1.5rem 0; display: flex; flex-direction: row;}
 .py-2 {  padding: 2rem 0;}
 .py-3 {  padding: 3rem 0;}
 
@@ -313,14 +314,14 @@ p {
 }
 
 .text-primary {
-  color: #55A38A;
+  color: #8a55a3;
 }
 
 /* Showcase */
 
 #showcase {
   display: flex;
-  background: #333 url("../img/gc_showcase.jpg") no-repeat center center/cover;
+  background: #333 url("./resources/GC-Portada_Web.jpeg") no-repeat center center/cover;
   margin-top: px;
   height: 70vh;
   color: #fff;
@@ -333,7 +334,7 @@ p {
   justify-content: center;
   align-items: center;
   height: 70vh;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   /* Overlay */
   position: absolute;
   top: 0px;
@@ -366,7 +367,7 @@ p {
   border-radius: 50%;
   padding: 1rem;
   margin-bottom: 1rem;
-  color: #55A38A;
+  color: #8a55a3;
   
 }
 
@@ -409,55 +410,52 @@ p {
 <body>
 
 <!-- Header -->
-<header class="w3-container w3-center" style="padding:64px 16px; background:#493E4E">
+<header id="showcase" style="padding:48px 64px; background:#493E4E">
+  <div class="showcase-content">
+     <h1 class="w3-margin w3-jumbo" style="color:#f4f4f4;">Curso Intensivo Mercado Libre
+     </h1>
 
-<!--header class="bgimg-1 w3-display-container w3-grayscale-min" id="home"-->
+     <h2 class="lead" style="color:#f4f4f4">
+     Aprende a<section class="looptext">
+                       <div>implementar</div>
+                       <div>desarrollar</div>
+                       <div>integrar</div>
+              </section>el canal de Mercado Libre en tu empresa.
+             
+     </h2>    
 
-     <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-       <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-       <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-     </svg>
 
+     <div class="w3-container" style="padding: 24px 50px 128px 50px;">
 
-  <h1 class="w3-margin w3-jumbo" style="color:#f4f4f4">Curso Intensivo Mercado Libre
-    <h2 style="color:#f4f4f4">Aprende a<section class="looptext">
-                                       <div>implementar</div>
-                                       <div>desarrollar</div>
-                                       <div>integrar</div>
-                                     </section>el canal de Mercado Libre en tu empresa.
-    </h2>      
-  </h1>
-
-  <div class="w3-container w3-padding-48">
-
-      <div class="btncontainer">
-      <div class="btncenter">
+        <div class="btncontainer">
+        <div class="btncenter">
       
-        <a href="https://forms.gle/NfbimSKUsRh5P4ER9">      
+          <a href="https://forms.gle/NfbimSKUsRh5P4ER9" target="_blank">      
       
-        <button class="btn">
-          <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-          </svg>
-          <span style="color:#f4f4f4">¡CONTÁCTATE!</span>
-        </button>
+          <button class="btn">
+            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span style="color:#f4f4f4">¡CONTÁCTATE!</span>
+          </button>
         
-        </a>
+          </a>
         
-      </div>
-      </div>
+        </div>
+        </div>
   
     
-   </div>
-  
-
-  <!--button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button-->
-  
+     </div>
+     
+ </div>
+           
 </header>
 
+<!--header class="bgimg-1 w3-display-container w3-grayscale-min" id="home"--
+
   <!-- Sección: Servicios -->
-    <section id="servicios" class="w3-padding-64">
+<section id="servicios" class="w3-padding-64">
       <div class="custom_container">
         <h2 class="m-heading text-center">Conviértete en
           <span class="text-primary"> Experto</span> en el canal de retail online de mayor crecimiento.
@@ -492,7 +490,7 @@ p {
           </div>
         </div>
       </div>
-    </section>
+</section>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container" style="padding: 64px 7rem;">
