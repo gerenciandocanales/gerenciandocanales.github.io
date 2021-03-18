@@ -17,15 +17,49 @@
 <style>
 
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-body,h1,h2,h3,h4,h5,h6 
+
+/*body {
+  background: linear-gradient(180deg, #f4f4f4 25%, #f4f4f4 51%, #8a55a3 95%);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}*/
+
+body {	
+	background: linear-gradient(to left, #E2D5E8, #D3B6E0, #AB83BD, #8A55A3, #753192 );
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+body:before{
+	content:'';
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+	background: linear-gradient(to bottom, #753192, #f4f4f4 95%);
+}
+
+h1,h2,h3,h4,h5,h6 
   {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   }
   
@@ -46,7 +80,7 @@ body,h1,h2,h3,h4,h5,h6
 }
 
 .w3-bar,h1, 
-{font-family: "Ubuntu", sans-serif
+{font-family: "Roboto", sans-serif
 }
 
 .btncontainer {
@@ -72,7 +106,7 @@ body,h1,h2,h3,h4,h5,h6
   height: 60px;
   cursor: pointer;
   background: transparent;
-  border: 1px solid #FFE3CE;
+  border: 1px solid #f4f4f4;
   outline: none;
   transition: 1s ease-in-out;
 }
@@ -82,7 +116,7 @@ svg {
   left: 0;
   top: 0;
   fill: none;
-  stroke: #EC7137;
+  stroke: #8a55a3;
   stroke-dasharray: 150 480;
   stroke-dashoffset: 150;
   transition: 1s ease-in-out;
@@ -90,7 +124,7 @@ svg {
 
 .btn:hover {
   transition: 1s ease-in-out;
-  background: #1D8A99;
+  background: #55A38A;
 }
 
 .btn:hover svg {
@@ -105,8 +139,8 @@ svg {
 
 /* Collapsible butttton */
 .collapsible {
-  background-color: #493E4E;
-  color: #FFE3CE;
+  background-color: #333333;
+  color: #f4f4f4;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -120,13 +154,13 @@ svg {
 /* Hover color, replace with the cheta function */
 .active, .collapsible:hover {
   transition: all 1s ease-in-out;
-  background-color: #1D8A99;
+  background-color: #55A38A;
 }
 
 .collapsible:after {
   transition: 1s ease-in-out;
   content: '\002B';
-  color: #EC7137;
+  color: #f4f4f4;
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -137,41 +171,45 @@ svg {
 }
 
 .content {
-  padding: 0 18px;
+  padding: 6 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
-  background-color: #FFE3CE;
+  background-color: #f0e4f5;
 }
 
 .card {
   /* Add shadows to create the "card" effect */
-  background: #FFE3CE;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background: #333333;
+  color:#f4f4f4;
+  box-shadow: 0 px px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
+  padding: 24px 24px;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
+  transition: all 1s ease-in-out;
+  background-color: #55A38A;
+
 }
 
 /* Add some padding inside the card container */
 .card-container {
   background: #493E4E;
-  padding: 15px 23px;
+  padding: 24px 48px;
 }
 
 .looptext {
   width: 100%;
-  height: 220px;
+  height: 50px;
   position: relative;
 }
 
 .looptext>div {
-  font-size: 64px;
+  font-size: 40px;
   text-transform: uppercase;
-  color: #EC7137;
+  color: #8a55a3;
   opacity: 0;
   height: 0px;
 }
@@ -194,9 +232,166 @@ svg {
     100% {opacity: 0; height: 0px;}
 }
 
+
+/* Utility Classes */
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-primary {
+  background: #8a55a3;
+  color: #fff;
+}
+
+.custom_container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+
+}
+
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.list {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #444 dotted 1px;
+}
+
+.py-1 {  padding: 1.5rem 0;}
+.py-2 {  padding: 2rem 0;}
+.py-3 {  padding: 3rem 0;}
+
+.p-1 { padding: 1.5rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #55A38A;
+}
+
+/* Showcase */
+
+#showcase {
+  display: flex;
+  background: #333 url("../img/gc_showcase.jpg") no-repeat center center/cover;
+  margin-top: px;
+  height: 70vh;
+  color: #fff;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  padding: 0 2rem;
+  /* Overlay */
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Section: Servicios */
+
+#servicios .items {
+  display: flex;
+  padding: 1rem;
+  text-align: center;
+}
+
+#servicios .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem 0.75rem 0;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+}
+
+#servicios .items .item i {
+  /* background: #8a55a3; */
+  border-radius: 50%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #55A38A;
+  
+}
+
+/* Section: Sobre el Programa */
+#who {
+  display: flex;
+}
+
+#who div {
+  flex: 1;
+}
+
+#who .who-img {
+  background: url('../img/contenido.png') no-repeat center center/cover;
+  }
+
+/* Section: Conduce */
+#clients .items {
+  display: flex;
+  align-content: center;
+}
+
+#clients .items img {
+  display: block;
+  margin: auto;
+ 
+  width: 10vw;
+  padding: 1rem;
+}
+
+/* Base Colors
+  color: #753192;
+  color: #8A55A3;
+  color: #AB83BD;
+  color: #D3B6E0;
+  color: #E2D5E8;
+*/
+
 </style>
 <body>
-
 
 <!-- Header -->
 <header class="w3-container w3-center" style="padding:64px 16px; background:#493E4E">
@@ -209,12 +404,13 @@ svg {
      </svg>
 
 
-  <h1 class="w3-margin w3-jumbo" style="color:#FFE3CE">Tu canal digital MercadoLibre
-      <section class="looptext">
-              <div>Desarrolla</div>
-              <div>Optimiza</div>
-              <div>Integra</div>
-      </section>
+  <h1 class="w3-margin w3-jumbo" style="color:#f4f4f4">Curso Intensivo Mercado Libre
+    <h2 style="color:#f4f4f4">Aprende a<section class="looptext">
+                                       <div>implementar</div>
+                                       <div>desarrollar</div>
+                                       <div>integrar</div>
+                                     </section>el canal de Mercado Libre en tu empresa.
+    </h2>      
   </h1>
 
   <div class="w3-container w3-padding-48">
@@ -229,7 +425,7 @@ svg {
             <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
             <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
           </svg>
-          <span style="color:#FFE3CE">¡COMENZAR!</span>
+          <span style="color:#f4f4f4">¡CONTÁCTATE!</span>
         </button>
         
         </a>
@@ -245,8 +441,46 @@ svg {
   
 </header>
 
+  <!-- Sección: Servicios -->
+    <section id="servicios" class="w3-padding-64">
+      <div class="custom_container">
+        <h2 class="m-heading text-center">Conviértete en
+          <span class="text-primary"> Experto</span> en el canal de retail online de mayor crecimiento.
+        </h2>
+        <div class="items">
+          <div class="item">
+            <div>
+              <i class="material-icons" style="font-size:42px;">desktop_windows</i>
+              <h3>Modalidad</h3>
+              <p>
+                100% Online. Clases en vivo y portal de acceso a contenidos.
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <i class="material-icons" style="font-size:42px;">schedule</i>
+              <h3>Carga Horaria</h3>
+              <p>
+                Total 32 horas repartidas en 16 clases.
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <i class="material-icons" style="font-size:42px;">date_range</i>
+              <h3>Duración</h3>
+              <p>
+                2 meses de duración. 2 encuentros semanales
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container" style="padding:64px 16px; background:#E6E1F2" id="about">
+<div class="w3-row-padding w3-padding-64 w3-container" style="padding:64px 16px;" id="about">
   <div class="w3-twothird">
     
     <h2 style=padding:32px>Información</h2>
@@ -285,7 +519,7 @@ svg {
           <img src="./resources/df-photo_mid-square.jpeg" alt="David" class="profile_img">
         <div class="container">
           <h4><b>David Férnandez</b></h4>
-          <p>Experto en e - Commerce</p>
+          <p>Experto en e - Commerce con más de 5 años de trayectoria en el análisis y diseño de operaciones online</p>
         </div>
        </div>
     </div>
@@ -317,29 +551,19 @@ svg {
   </div>
 </div-->
 
-<div class="w3-container w3-row w3-center w3-padding-64" style="background:#493E4E">
-  <div class="w3-quarter" style="color:#EC7137">
+<div class="w3-container w3-row w3-center w3-padding-64">
+  <div class="w3-half" style="color:#EC7137">
     <span class="w3-xxlarge" >100%</span>
     <br>Online
   </div>
-  <div class="w3-quarter" style="color:#EC7137">
-    <span class="w3-xxlarge">16</span>
-    <br>Sesiones Intensivas
-  </div>
-  <div class="w3-quarter" style="color:#EC7137">
-    <span class="w3-xxlarge">8</span>
-    <br>Semanas de Duración
-  </div>
-  <div class="w3-quarter" style="color:#EC7137">
+  <div class="w3-half" style="color:#EC7137">
     <span class="w3-xxlarge">40+</span>
     <br>Estudiantes Satisfechos
   </div>
 </div>
 
-<!-- Footer -->
-
-<div class="w3-container" style="padding:32px 8px; background:#E6E1F2" id="contact">
-  <h3 class="w3-center">CONTACTO</h3>
+<div class="w3-container" style="padding:32px 32px;">
+  <h2 class="w3-center">CONTACTO</h2>
   <div class="w3-row-padding w3-center" style="margin-top:32px">
     <div class="w3-half">
       <i class="fa fa-envelope w3-margin-bottom w3-xxlarge w3-center"></i>
@@ -352,14 +576,16 @@ svg {
   </div>
 </div>
 
-<footer class="w3-container w3-padding-32 w3-center" style="background:#E6E1F2"> 
+<!-- Footer -->
+
+<footer class="w3-container w3-padding-32 w3-center" style="background:#333333"> 
   <div class="w3-xlarge w3-padding-32">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
  </div>
- <p>Powered by El Dedo Records</p>
+ <p>Copyright &copy; 2021, Gerenciando Canales, todos los derechos reservados.</p>
 </footer>
 
 <script>
