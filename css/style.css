@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  background: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  }
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-primary {
+  background: #8a55a3;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #8a55a3;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #753192;
+}
+
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+  align-content: center;
+
+}
+
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  }
+
+.list {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #444 dotted 1px;
+}
+
+.py-1 {  padding: 1.5rem 0;}
+.py-2 {  padding: 2rem 0;}
+.py-3 {  padding: 3rem 0;}
+
+.p-1 { padding: 1.5rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.shadow {
+  text-shadow: #777 1px 0px;
+}
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #8a55a3;
+}
+
+
+
+
+/* Navbar Dark*/
+#navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 0.5rem;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0.25rem;
+}
+
+#navbar ul li a:hover {
+  background: #8a55a3;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#navbar h1 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+#navbar h1 img {
+  margin: 0 0.25rem;
+  background: #333;
+  padding: .3rem;
+  border-radius: 5px;
+  width: 40px;
+}
+#navbar h1 p {
+  margin: 0.25rem;
+}
+
+/* Showcase */
+
+#showcase {
+  display: flex;
+  background: #333 url("../img/gc_showcase.jpg") no-repeat center center/cover;
+  margin-top: px;
+  height: 70vh;
+  color: #fff;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  padding: 0 2rem;
+  
+  /*Overlay*/
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Section: Modalidad */
+
+#servicios .items {
+  display: flex;
+  padding: 1rem;
+  text-align: center;
+}
+
+#servicios .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem 0.75rem 0;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+}
+
+#servicios .items .item i {
+  /* background: #8a55a3; */
+  border-radius: 50%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #8a55a3;
+  
+}
+
+/* Section: Sobre el Programa */
+#who {
+  display: flex;
+}
+
+#who div {
+  flex: 1;
+}
+
+#who .who-img {
+  background: url('../img/contenido.png') no-repeat center center/cover;
+  }
+
+/* Section: Conduce */
+#clients .items {
+  display: flex;
+  align-content: center;
+}
+
+#clients .items img {
+  display: block;
+  margin: auto;
+ 
+  width: 10vw;
+  padding: 1rem;
+}
+
+/* Section: Contact */
+#contact {
+  display: flex;
+}
+
+#contact .contact-form .form-group {
+  margin: 0.75rem;
+}
+
+#contact .contact-form label {
+  display: block;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+
+/* Base Colors
+  color: #753192;
+  color: #8A55A3;
+  color: #AB83BD;
+  color: #D3B6E0;
+  color: #E2D5E8;
+*/
+
+.profile-picture {
+	border-radius: 100%;
+	overflow: hidden;
+	-webkit-box-sizing: content-box;
+  	-moz-box-sizing: content-box;
+  	box-sizing: content-box;	
+}
+
+.big-profile-picture {
+  margin: 1rem auto;		
+  border: 5px solid #8A55A3;
+  width: 150px;
+  height: 150px;
+  
+}
+
+.midcenter
+{
+  margin: auto;
+  width: 70%;
+    padding: 10px;
+}
+
