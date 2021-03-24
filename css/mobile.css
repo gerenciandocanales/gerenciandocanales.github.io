@@ -18,22 +18,8 @@
 
 /* Smartphones */
 @media(max-width: 500px) {
-  #navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #navbar .logo {
-    margin-bottom: 0.5rem;
-    text-align: center;
-  }
-
-  #navbar ul {
-    padding: 0.5rem;
-  }
-
-  #showcase .showcase-content {
-    top: 0px;
+   #showcase .showcase-content {
+    top: 0;
   }
 
   #who {
@@ -57,7 +43,6 @@
   }
 
   #contact .map {
-    display: none
     height: 200px;
     border-top: 4px solid #333;
   }
@@ -66,7 +51,7 @@
 @media(max-height: 568px) {
   #showcase .showcase-content {
     margin-top: -2rem;
-    top: 140px;
+    top: 0;
   }
 
   .l-heading {
